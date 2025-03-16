@@ -1,0 +1,26 @@
+type Candidate {
+  id: Int!
+  name: Name!
+  education: Education!
+}
+
+type Name {
+  first: String!
+  last: String!
+}
+
+type Education {
+  id: Int!
+  school: School!
+  major: Major!
+}
+
+type School {
+  id: Int!
+  name: String!
+}
+
+type Major {
+  id: Int!
+  name: String!
+}
