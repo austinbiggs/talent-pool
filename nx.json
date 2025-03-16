@@ -31,7 +31,8 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      }
+      },
+      "exclude": ["libs/models-graphql/*", "libs/gql/models/*"]
     },
     {
       "plugin": "@nx/next/plugin",
@@ -63,6 +64,15 @@
       "plugin": "@nx/jest/plugin",
       "options": {
         "targetName": "test"
+      }
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": ["libs/models-graphql/*", "libs/gql/models/*"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
       }
     }
   ],

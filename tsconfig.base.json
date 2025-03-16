@@ -15,6 +15,10 @@
     "noUnusedLocals": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2022"
+    "target": "es2022",
+    "paths": {
+      "models": ["libs/gql/models/src/index.ts"],
+      "models-graphql": ["libs/models-graphql/src/index.ts"]
+    }
   }
 }
