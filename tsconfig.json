@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compileOnSave": false,
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/talent-pool-e2e"
+    },
+    {
+      "path": "./apps/talent-pool"
+    }
+  ]
+}
