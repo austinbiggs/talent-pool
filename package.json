@@ -1,0 +1,6 @@
+{
+  "repository": "git@github.com:austinbiggs/talent-pool.git",
+  "author": "Austin Biggs <austintbiggs@gmail.com>",
+  "private": true,
+  "packageManager": "yarn@4.7.0"
+}
