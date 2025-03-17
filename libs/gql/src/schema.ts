@@ -2,15 +2,15 @@ import { merge } from 'lodash';
 import { makeExecutableSchema } from '@graphql-tools/schema';
 
 // operation type imports
-import * as Query from './types/operations/query';
-import * as Mutation from './types/operations/mutation';
-import * as Subscription from './types/operations/subscription';
+import * as Query from '././graph/operations/query';
+import * as Mutation from '././graph/operations/mutation';
+import * as Subscription from '././graph/operations/subscription';
 
 // entity type imports
-import * as Candidate from './types/candidate';
-import * as Education from './types/education';
-import * as Major from './types/major';
-import * as School from './types/school';
+import * as Candidate from '././graph/candidate';
+import * as Education from '././graph/education';
+import * as Major from '././graph/major';
+import * as School from '././graph/school';
 
 // all graph type modules
 const operationTypeModules = [Query, Mutation, Subscription];
