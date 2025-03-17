@@ -16,7 +16,7 @@ const generates: CodegenConfig['generates'] = {
   [`${TARGET_BASE_PATH}/apollo-helpers.ts`]: {
     plugins: [addPlugin, 'typescript-apollo-client-helpers'],
   },
-  [`${TARGET_BASE_PATH}/models.ts`]: {
+  [`${TARGET_BASE_PATH}/types.ts`]: {
     plugins: [addPlugin, 'typescript'],
   },
   [`${TARGET_BASE_PATH}/introspection.json`]: {
