@@ -32,7 +32,12 @@
           "watchDepsName": "watch-deps"
         }
       },
-      "exclude": ["libs/models-graphql/*", "libs/gql/models/*"]
+      "exclude": [
+        "libs/models-graphql/*",
+        "libs/gql/models/*",
+        "libs/gql/resolvers/*",
+        "libs/gql/*"
+      ]
     },
     {
       "plugin": "@nx/next/plugin",
@@ -68,7 +73,12 @@
     },
     {
       "plugin": "@nx/js/typescript",
-      "include": ["libs/models-graphql/*", "libs/gql/models/*"],
+      "include": [
+        "libs/models-graphql/*",
+        "libs/gql/models/*",
+        "libs/gql/resolvers/*",
+        "libs/gql/*"
+      ],
       "options": {
         "typecheck": {
           "targetName": "typecheck"

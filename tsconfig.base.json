@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "sourceMap": true,
+    "declaration": false,
     "composite": true,
     "declarationMap": true,
     "emitDeclarationOnly": true,
@@ -17,8 +20,7 @@
     "strict": true,
     "target": "es2022",
     "paths": {
-      "models": ["libs/gql/models/src/index.ts"],
-      "models-graphql": ["libs/models-graphql/src/index.ts"]
+      "gql": ["libs/gql/src/index.ts"]
     }
   }
 }
