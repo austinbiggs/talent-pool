@@ -16,6 +16,14 @@ const generates: CodegenConfig['generates'] = {
   [`${TARGET_BASE_PATH}/apollo-helpers.ts`]: {
     plugins: [addPlugin, 'typescript-apollo-client-helpers'],
   },
+  [`${TARGET_BASE_PATH}/resolvers.ts`]: {
+    plugins: ['add', 'typescript-resolvers'],
+    config: {
+      useIndexSignature: true,
+      content: 'import * as types from "./types";',
+      namespacedImportName: 'types',
+    },
+  },
   [`${TARGET_BASE_PATH}/types.ts`]: {
     plugins: [addPlugin, 'typescript'],
   },
