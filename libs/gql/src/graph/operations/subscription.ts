@@ -8,7 +8,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Subscription: {
-    _empty: () => {},
+    _empty: () => 'empty',
   },
 };
 

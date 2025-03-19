@@ -1,5 +1,5 @@
 {
-  "name": "@nx/talent-pool",
+  "name": "talent-pool",
   "version": "0.0.1",
   "private": true,
   "nx": {

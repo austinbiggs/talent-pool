@@ -8,7 +8,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Mutation: {
-    _empty: () => {},
+    _empty: () => 'empty',
   },
 };
 
