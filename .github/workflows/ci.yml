@@ -27,9 +27,6 @@ jobs:
       - name: 'Set up project'
         uses: ./.github/actions/setup-project
 
-      - name: 'Set up Cypress'
-        run: npx cypress install
-
       - name: 'Format Check'
         run: yarn run nx affected --target=format:check --parallel --max-parallel=2
 
