@@ -1,4 +1,6 @@
-import * as types from './types';
+/* eslint-disable */
+// Auto-generated file: Do not alter.
+// @generated w/ gql:codegen
 import { GraphQLResolveInfo } from 'graphql';
 export type RequireFields<T, K extends keyof T> = Omit<T, K> & {
   [P in K]-?: NonNullable<T[P]>;

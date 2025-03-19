@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+// @ts-ignore
 
 // ***********************************************
 // This example commands.ts shows you how to
@@ -19,6 +20,7 @@ declare global {
 }
 
 // -- This is a parent command --
+// @ts-ignore
 Cypress.Commands.add('login', (email, password) => {
   console.log('Custom command example: Login', email, password);
 });
