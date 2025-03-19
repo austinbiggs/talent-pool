@@ -31,7 +31,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:^3.13.4":
+"@apollo/client@npm:3.13.4":
   version: 3.13.4
   resolution: "@apollo/client@npm:3.13.4"
   dependencies:
@@ -104,7 +104,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/server@npm:^4.11.3":
+"@apollo/server@npm:4.11.3":
   version: 4.11.3
   resolution: "@apollo/server@npm:4.11.3"
   dependencies:
@@ -16743,8 +16743,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "talent-pool@workspace:."
   dependencies:
-    "@apollo/client": "npm:^3.13.4"
-    "@apollo/server": "npm:^4.11.3"
+    "@apollo/client": "npm:3.13.4"
+    "@apollo/server": "npm:4.11.3"
     "@as-integrations/next": "npm:^3.2.0"
     "@eslint/compat": "npm:1.2.7"
     "@eslint/eslintrc": "npm:2.1.4"
