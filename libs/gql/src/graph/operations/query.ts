@@ -15,8 +15,8 @@ const resolvers = {
       firstName: () => 'Austin',
       lastName: () => 'Austin',
     }),
-    education: () => {},
-    school: () => {},
+    education: () => '',
+    school: () => '',
   },
 };
 
