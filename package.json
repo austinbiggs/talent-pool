@@ -16,8 +16,8 @@
     "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@apollo/client": "^3.13.4",
-    "@apollo/server": "^4.11.3",
+    "@apollo/client": "3.13.4",
+    "@apollo/server": "4.11.3",
     "@eslint/compat": "1.2.7",
     "@eslint/eslintrc": "2.1.4",
     "@eslint/js": "9.22.0",
