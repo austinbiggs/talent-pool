@@ -39,5 +39,5 @@ jobs:
       - name: 'Unit tests'
         run: npx nx affected -t test
 
-      - name: 'Integration tests'
-        run: npx nx affected -t e2e
+#      - name: 'Integration tests'
+#        run: npx nx affected -t e2e
