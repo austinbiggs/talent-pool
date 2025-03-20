@@ -20,7 +20,9 @@
     "strict": true,
     "target": "es2022",
     "paths": {
-      "gql": ["libs/gql/src/index.ts"]
+      "lib:gql": ["libs/gql/src/index.ts"],
+      "@talent/app*": ["apps/talent-pool/src/*"],
+      "@talent/gql": ["libs/gql/src/index.ts"]
     }
   }
 }

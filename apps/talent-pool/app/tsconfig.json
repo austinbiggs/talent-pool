@@ -4,6 +4,7 @@
     "jsx": "preserve",
     "noEmit": true,
     "emitDeclarationOnly": false,
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "lib": [

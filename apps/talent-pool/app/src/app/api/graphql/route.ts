@@ -1,6 +1,6 @@
 import { startServerAndCreateNextHandler } from '@as-integrations/next';
 import { NextRequest } from 'next/server';
-import { server } from 'libs/gql/src';
+import { server } from '@talent/gql';
 
 const handler = startServerAndCreateNextHandler<NextRequest>(server, {
   context: async (req) => ({ req }),
