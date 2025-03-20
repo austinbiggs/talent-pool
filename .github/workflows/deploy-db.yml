@@ -1,0 +1,37 @@
+name: '📡 Deploy Database Changes'
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - apps/talent-pool/db/src/supabase/migrations/*
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      SUPABASE_PROJECT_ID: ${{ secrets.TP_SUPABASE_PROJECT_ID }}
+      SUPABASE_DB_PASSWORD: ${{ secrets.TP_SUPABASE_DB_PASSWORD }}
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+        with:
+          # We need to fetch all branches and commits so that Nx affected has a base to compare against.
+          fetch-depth: 0
+
+      - name: 'Set up project'
+        uses: ./.github/actions/setup-project
+
+      - name: 'Start the Supabase development server'
+        run: yarn nx run db:supabase start
+
+      - name: 'Lint the database migrations'
+        run: yarn nx run db:supabase db lint --level error
+
+      - name: 'Link the remote database'
+        run: yarn nx run db:supabase link --project-ref ${SUPABASE_PROJECT_ID} --password ${SUPABASE_DB_PASSWORD}
+
+      - name: 'Apply all pending migrations to the database'
+        run: yarn nx run db:supabase db push --linked --include-all --verbose
