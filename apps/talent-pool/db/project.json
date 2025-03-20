@@ -4,7 +4,7 @@
   "sourceRoot": "apps/talent-pool/db/src",
   "projectType": "library",
   "tags": [],
-  "// targets": "to see all targets run: nx show project talent-pool-db --web",
+  "// targets": "to see all targets run: nx show project db --web",
   "targets": {
     "supabase": {
       "executor": "nx:run-commands",
@@ -16,7 +16,7 @@
           }
         ],
         "color": true,
-        "cwd": "apps/austin/db/src",
+        "cwd": "apps/talent-pool/db/src",
         "parallel": false
       }
     }
