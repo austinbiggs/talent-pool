@@ -4,7 +4,7 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/talent-pool"
+      "path": "./apps/talent-pool/app"
     },
     {
       "path": "./libs/gql"

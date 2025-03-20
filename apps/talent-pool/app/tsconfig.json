@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../tsconfig.base.json",
   "compilerOptions": {
     "jsx": "preserve",
     "noEmit": true,
@@ -31,10 +31,10 @@
     ".next/types/**/*.ts",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
+    "app/src/**/*.js",
+    "app/src/**/*.jsx",
+    "app/src/**/*.ts",
+    "app/src/**/*.tsx",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -42,11 +42,11 @@
     "dist",
     "node_modules",
     "jest.config.ts",
-    "src/**/*.spec.ts",
-    "src/**/*.test.ts",
+    "app/src/**/*.spec.ts",
+    "app/src/**/*.test.ts",
     ".next",
     "eslint.config.js",
     "eslint.config.cjs",
-    "eslint.config.mjs"
+    "app/eslint.config.mjs"
   ]
 }
