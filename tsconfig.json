@@ -4,10 +4,10 @@
   "files": [],
   "references": [
     {
-      "path": "./apps/talent-pool-e2e"
+      "path": "./apps/talent-pool/app"
     },
     {
-      "path": "./apps/talent-pool"
+      "path": "./libs/gql"
     }
   ]
 }
