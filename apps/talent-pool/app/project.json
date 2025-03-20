@@ -1,6 +1,6 @@
 {
   "name": "talent-pool",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/talent-pool",
   "projectType": "application",
   "tags": [],
