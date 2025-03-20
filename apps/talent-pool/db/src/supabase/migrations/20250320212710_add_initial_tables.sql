@@ -473,3 +473,27 @@ grant trigger on table "public"."schools" to "service_role";
 grant truncate on table "public"."schools" to "service_role";
 
 grant update on table "public"."schools" to "service_role";
+
+alter table "public"."candidate_educations" drop constraint "candidate_educations_candidate_id_key";
+
+drop index if exists "public"."candidate_educations_candidate_id_key";
+
+alter table "public"."candidate_educations" add column "end_date" date not null;
+
+alter table "public"."candidate_educations" add column "school_id" uuid not null;
+
+alter table "public"."candidate_educations" add column "start_date" date not null;
+
+alter table "public"."school_locations" add column "school_id" uuid not null;
+
+CREATE UNIQUE INDEX school_locations_school_id_key ON public.school_locations USING btree (school_id);
+
+alter table "public"."candidate_educations" add constraint "candidate_educations_candidate_id_fkey" FOREIGN KEY (candidate_id) REFERENCES candidates(id) ON UPDATE CASCADE ON DELETE CASCADE not valid;
+
+alter table "public"."candidate_educations" validate constraint "candidate_educations_candidate_id_fkey";
+
+alter table "public"."school_locations" add constraint "school_locations_school_id_fkey" FOREIGN KEY (school_id) REFERENCES schools(id) ON UPDATE CASCADE ON DELETE CASCADE not valid;
+
+alter table "public"."school_locations" validate constraint "school_locations_school_id_fkey";
+
+alter table "public"."school_locations" add constraint "school_locations_school_id_key" UNIQUE using index "school_locations_school_id_key";
