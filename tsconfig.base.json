@@ -20,10 +20,11 @@
     "strict": true,
     "target": "es2022",
     "paths": {
-      "@talent/app*": ["apps/talent-pool/src/*"],
-      "@talent/db": ["apps/talent-pool/db/src/index.ts"],
-      "talent:db": ["apps/talent-pool/db/src/index.ts"],
+      "@talent/app*": ["apps/talent-pool/app/src/*"],
+      "@talent/db*": ["apps/talent-pool/db/src/*"],
+      "talent:db*": ["apps/talent-pool/db/src/*"],
       "@talent/gql": ["libs/gql/src/index.ts"],
+      "lib:db": ["apps/talent-pool/db/src/*"],
       "lib:gql": ["libs/gql/src/index.ts"]
     }
   }

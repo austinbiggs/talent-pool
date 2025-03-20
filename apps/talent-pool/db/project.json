@@ -1,5 +1,5 @@
 {
-  "name": "talent-pool-db",
+  "name": "db",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/talent-pool/db/src",
   "projectType": "library",
