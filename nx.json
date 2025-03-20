@@ -36,7 +36,8 @@
         "libs/models-graphql/*",
         "libs/gql/models/*",
         "libs/gql/resolvers/*",
-        "libs/gql/*"
+        "libs/gql/*",
+        "apps/talent-pool/db//*"
       ]
     },
     {
@@ -68,7 +69,8 @@
         "libs/models-graphql/*",
         "libs/gql/models/*",
         "libs/gql/resolvers/*",
-        "libs/gql/*"
+        "libs/gql/*",
+        "apps/talent-pool/db//*"
       ],
       "options": {
         "typecheck": {

@@ -1,0 +1,9 @@
+{
+  "name": "talent-pool-db",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/talent-pool/db/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project talent-pool-db --web",
+  "targets": {}
+}
