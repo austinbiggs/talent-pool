@@ -16339,6 +16339,7 @@ __metadata:
     graphql-codegen-typescript-mock-data: "npm:4.3.2"
     jest: "npm:29.7.0"
     jest-environment-jsdom: "npm:29.7.0"
+    jest-environment-node: "npm:^29.7.0"
     lodash: "npm:4.17.21"
     next: "npm:~15.2.0"
     nx: "npm:20.6.2"
