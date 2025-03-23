@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 import { Types } from '@talent/gql';
 import { createServiceRoleClient } from 'talent:dbsupabase/clients';
 
-const DEFAULT_QUANTITY = 27;
+const DEFAULT_QUANTITY = 10;
 const quantity = parseInt(process.argv[2], 10) || DEFAULT_QUANTITY;
 
 type GeneratedCandidate = {
