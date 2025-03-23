@@ -1,6 +1,6 @@
 import { createBrowserClient } from '@supabase/ssr';
 import { Database } from '../_generated/types';
-import { HostType } from 'talent:dbsupabase/clients/types';
+import { HostType } from './types';
 
 const MISSING_SUPABASE_URL = 'MISSING_SUPABASE_URL';
 const MISSING_SUPABASE_ANON_KEY = 'MISSING_SUPABASE_ANON_KEY';

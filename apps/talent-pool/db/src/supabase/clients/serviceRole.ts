@@ -1,6 +1,6 @@
 import { createBrowserClient } from '@supabase/ssr';
 import { Database } from '../_generated/types';
-import { HostType } from 'talent:dbsupabase/clients/types';
+import { HostType } from './types';
 
 if (typeof window !== 'undefined') {
   throw new Error(
