@@ -2,7 +2,9 @@ import { faker } from '@faker-js/faker';
 
 import { Types } from '@talent/gql';
 import { createServiceRoleClient } from 'talent:dbsupabase/clients';
+import { HostType } from 'talent:dbsupabase/clients/types';
 
+const DEFAULT_HOST = HostType.local;
 const DEFAULT_QUANTITY = 10;
 const quantity = parseInt(process.argv[2], 10) || DEFAULT_QUANTITY;
 
@@ -35,9 +37,9 @@ function generateCandidates(quantity: number): GeneratedCandidate[] {
   return candidates;
 }
 
-async function insertCandidates(){
+async function insertCandidates(host: HostType){
   // create Supabase client
-  const serviceRoleClient = createServiceRoleClient();
+  const serviceRoleClient = createServiceRoleClient(host);
 
   // generate Candidates to be inserted
   const candidates = generateCandidates(quantity);
@@ -56,7 +58,4 @@ async function insertCandidates(){
   console.log(candidates);
 }
 
-
-insertCandidates();
-
-
+insertCandidates(DEFAULT_HOST);

@@ -2,7 +2,9 @@ import { faker } from '@faker-js/faker';
 
 import { Types } from '@talent/gql';
 import { createServiceRoleClient } from 'talent:dbsupabase/clients';
+import { HostType } from 'talent:dbsupabase/clients/types';
 
+const DEFAULT_HOST = HostType.local;
 const BATCH_SIZE = 100;
 const quantity = parseInt(process.argv[2], 10) || BATCH_SIZE;
 
@@ -10,33 +12,33 @@ type GeneratedProfile = {
 
 }
 
-function generateCandidateProfile(): GeneratedProfile {
+function generateCandidateProfile(candidateId: string): GeneratedProfile {
   return {
 
   }
 }
 
 function generateProfiles(quantity: number): GeneratedProfile[] {
-  const Profiles: GeneratedProfile[] = [];
+  const profiles: GeneratedProfile[] = [];
 
   console.info(`Generating ${quantity.toLocaleString()} Profiles`);
 
   for (let i = 0; i < quantity; i++) {
-    Profiles.push(generateCandidateProfile());
+    profiles.push(generateCandidateProfile());
   }
 
-  return Profiles;
+  return profiles;
 }
 
-async function insertProfiles(){
+async function insertProfiles(host: HostType){
   // create Supabase client
-  const serviceRoleClient = createServiceRoleClient();
+  const serviceRoleClient = createServiceRoleClient(host);
 
   // generate Profiles to be inserted
-  const Profiles = generateProfiles(quantity);
+  const profiles = generateProfiles(quantity);
 
   // insert the Profiles into the DB
-  const { error } = await serviceRoleClient.from('Profiles').insert(Profiles);
+  const { error } = await serviceRoleClient.from('candidate_profiles').insert(profiles);
 
   if( error ) {
     console.error( error );
@@ -45,11 +47,11 @@ async function insertProfiles(){
   }
 
   // output the inserted Profiles
-  console.info(`Successfully inserted ${Profiles.length.toLocaleString()} Profiles`);
-  console.log(Profiles);
+  console.info(`Successfully inserted ${profiles.length.toLocaleString()} Profiles`);
+  console.log(profiles);
 }
 
 
-insertProfiles();
+insertProfiles(DEFAULT_HOST);
 
 
