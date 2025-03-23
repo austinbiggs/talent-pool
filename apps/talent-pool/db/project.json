@@ -34,17 +34,21 @@
         "parallel": false
       }
     },
-    "seed:candidates": {
+    "seed": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          {
-            "command": "ts-node --project ./tsconfig.tsnode.json {projectRoot}/src/scripts/seed-data/candidates.ts",
-            "forwardAllArgs": true
-          }
-        ],
         "color": true,
         "parallel": false
+      },
+      "configurations": {
+        "candidates": {
+          "commands": [
+            {
+              "command": "ts-node --project ./tsconfig.tsnode.json {projectRoot}/src/scripts/seed-data/candidates.ts",
+              "forwardAllArgs": true
+            }
+          ]
+        }
       }
     }
   }

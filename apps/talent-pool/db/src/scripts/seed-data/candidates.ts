@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 import { Types } from '@talent/gql';
 import { createServiceRoleClient } from 'talent:dbsupabase/clients';
 
-const DEFAULT_QUANTITY = 10;
+const DEFAULT_QUANTITY = 27;
 const quantity = parseInt(process.argv[2], 10) || DEFAULT_QUANTITY;
 
 type GeneratedCandidate = {
@@ -26,7 +26,7 @@ function generateCandidate(): GeneratedCandidate {
 function generateCandidates(quantity: number): GeneratedCandidate[] {
   const candidates: GeneratedCandidate[] = [];
 
-  console.info(`Generating ${quantity} candidates`);
+  console.info(`Generating ${quantity.toLocaleString()} candidates`);
 
   for (let i = 0; i < quantity; i++) {
     candidates.push(generateCandidate());
@@ -43,19 +43,19 @@ async function insertCandidates(){
   const candidates = generateCandidates(quantity);
 
   // insert the Candidates into the DB
-  const { data, error } = await serviceRoleClient.from('candidates').insert(candidates);
+  const { error } = await serviceRoleClient.from('candidates').insert(candidates);
 
   if( error ) {
     console.error( error );
-  }
 
-  if(data) {
-    console.info(`Successfully inserted ${candidates.length} candidates`);
+    return;
   }
 
   // output the inserted Candidates
+  console.info(`Successfully inserted ${candidates.length.toLocaleString()} candidates`);
   console.log(candidates);
 }
+
 
 insertCandidates();
 
