@@ -10,19 +10,6 @@
       "command": "npx graphql-codegen -r ts-node/register --config {projectRoot}/codegen.ts",
       "cwd": "{projectRoot}",
       "parallel": false
-    },
-    "seed:candidates": {
-      "executor": "nx:run-commands",
-      "options": {
-        "commands": [
-          {
-            "command": "ts-node --project ./tsconfig.tsnode.json {projectRoot}/src/scripts/seed-data/candidates.ts",
-            "forwardAllArgs": true
-          }
-        ],
-        "color": true,
-        "parallel": false
-      }
     }
   }
 }
