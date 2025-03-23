@@ -1,20 +1,19 @@
-import { faker } from '@faker-js/faker';
-
-import { Types } from '@talent/gql';
-import { createServiceRoleClient } from 'talent:dbsupabase/clients';
-import { HostType } from 'talent:dbsupabase/clients/types';
+// import { faker } from '@faker-js/faker';
+//
+// import { Types } from '@talent/gql';
+import { createServiceRoleClient, HostType } from "../../supabase/clients"
 
 const DEFAULT_HOST = HostType.local;
 const BATCH_SIZE = 100;
 const quantity = parseInt(process.argv[2], 10) || BATCH_SIZE;
 
 type GeneratedProfile = {
-
+  candidate_id: string;
 }
 
-function generateCandidateProfile(candidateId: string): GeneratedProfile {
+function generateCandidateProfile(): GeneratedProfile {
   return {
-
+    candidate_id: ""
   }
 }
 

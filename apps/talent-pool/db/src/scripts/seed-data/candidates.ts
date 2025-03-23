@@ -1,8 +1,7 @@
 import { faker } from '@faker-js/faker';
 
 import { Types } from '@talent/gql';
-import { createServiceRoleClient } from 'talent:dbsupabase/clients';
-import { HostType } from 'talent:dbsupabase/clients/types';
+import { createServiceRoleClient, HostType } from "../../supabase/clients"
 
 const DEFAULT_HOST = HostType.local;
 const DEFAULT_QUANTITY = 10;
