@@ -12,6 +12,7 @@ export type CandidateKeySpecifier = (
   | 'firstName'
   | 'id'
   | 'lastName'
+  | 'sex'
   | CandidateKeySpecifier
 )[];
 export type CandidateFieldPolicy = {
@@ -19,6 +20,7 @@ export type CandidateFieldPolicy = {
   firstName?: FieldPolicy<any> | FieldReadFunction<any>;
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   lastName?: FieldPolicy<any> | FieldReadFunction<any>;
+  sex?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type EducationKeySpecifier = (
   | 'id'

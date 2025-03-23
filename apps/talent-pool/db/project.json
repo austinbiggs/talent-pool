@@ -19,6 +19,37 @@
         "cwd": "apps/talent-pool/db/src",
         "parallel": false
       }
+    },
+    "supabase:types": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npx nx run db:supabase gen types --lang=typescript > supabase/_generated/types.ts",
+            "forwardAllArgs": true
+          }
+        ],
+        "color": true,
+        "cwd": "apps/talent-pool/db/src",
+        "parallel": false
+      }
+    },
+    "seed": {
+      "executor": "nx:run-commands",
+      "options": {
+        "color": true,
+        "parallel": false
+      },
+      "configurations": {
+        "candidates": {
+          "commands": [
+            {
+              "command": "ts-node --project ./tsconfig.tsnode.json {projectRoot}/src/scripts/seed-data/candidates.ts",
+              "forwardAllArgs": true
+            }
+          ]
+        }
+      }
     }
   }
 }

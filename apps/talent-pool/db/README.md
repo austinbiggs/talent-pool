@@ -10,11 +10,12 @@ Run `nx test db` to execute the unit tests via [Jest](https://jestjs.io).
 
 A quick cheatsheet for common commands and operations.
 
-| Operation 🛠️                                                                                                             | Terminal command ⌨️                                                           |
-| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| Operation 🛠️                                                                                                            | Terminal command ⌨️                                                           |
+|--------------------------------------------------------------------------------------------------------------------------| ----------------------------------------------------------------------------- |
 | [Start Supabase](https://supabase.com/docs/reference/cli/introduction)                                                   | `db:supabase start`                                                    |
 | [Check Supabase status](https://supabase.com/docs/reference/cli/introduction)                                            | `db:supabase status`                                                   |
 | [Stop Supabase](https://supabase.com/docs/reference/cli/introduction)                                                    | `db:supabase stop`                                                     |
+| [Generate Supabase Types](https://supabase.com/docs/reference/cli/introduction)                                      | `db:supabase db dump -f supabase/schema.sql --schema public`           |
 | [Sync Supabase schema](https://supabase.com/docs/reference/cli/supabase-db-dump)                                         | `db:supabase db dump -f supabase/schema.sql --schema public`           |
 | [Sync Supabase data](https://supabase.com/docs/reference/cli/supabase-db-dump)                                           | `db:supabase db dump -f supabase/data.sql --data-only --schema public` |
 | [Create a new Supabase migration](https://supabase.com/docs/guides/local-development/overview)                           | `db:supabase migration new <migration-name>`                           |

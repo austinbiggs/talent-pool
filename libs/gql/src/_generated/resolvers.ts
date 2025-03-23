@@ -21,21 +21,21 @@ export type ResolverFn<TResult, TParent, TContext, TArgs> = (
   parent: TParent,
   args: TArgs,
   context: TContext,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => Promise<TResult> | TResult;
 
 export type SubscriptionSubscribeFn<TResult, TParent, TContext, TArgs> = (
   parent: TParent,
   args: TArgs,
   context: TContext,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => AsyncIterable<TResult> | Promise<AsyncIterable<TResult>>;
 
 export type SubscriptionResolveFn<TResult, TParent, TContext, TArgs> = (
   parent: TParent,
   args: TArgs,
   context: TContext,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => TResult | Promise<TResult>;
 
 export interface SubscriptionSubscriberObject<
@@ -43,7 +43,7 @@ export interface SubscriptionSubscriberObject<
   TKey extends string,
   TParent,
   TContext,
-  TArgs
+  TArgs,
 > {
   subscribe: SubscriptionSubscribeFn<
     { [key in TKey]: TResult },
@@ -69,7 +69,7 @@ export type SubscriptionObject<
   TKey extends string,
   TParent,
   TContext,
-  TArgs
+  TArgs,
 > =
   | SubscriptionSubscriberObject<TResult, TKey, TParent, TContext, TArgs>
   | SubscriptionResolverObject<TResult, TParent, TContext, TArgs>;
@@ -79,7 +79,7 @@ export type SubscriptionResolver<
   TKey extends string,
   TParent = {},
   TContext = {},
-  TArgs = {}
+  TArgs = {},
 > =
   | ((
       ...args: any[]
@@ -89,13 +89,13 @@ export type SubscriptionResolver<
 export type TypeResolveFn<TTypes, TParent = {}, TContext = {}> = (
   parent: TParent,
   context: TContext,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => types.Maybe<TTypes> | Promise<types.Maybe<TTypes>>;
 
 export type IsTypeOfResolverFn<T = {}, TContext = {}> = (
   obj: T,
   context: TContext,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => boolean | Promise<boolean>;
 
 export type NextResolverFn<T> = () => Promise<T>;
@@ -104,13 +104,13 @@ export type DirectiveResolverFn<
   TResult = {},
   TParent = {},
   TContext = {},
-  TArgs = {}
+  TArgs = {},
 > = (
   next: NextResolverFn<TResult>,
   parent: TParent,
   args: TArgs,
   context: TContext,
-  info: GraphQLResolveInfo
+  info: GraphQLResolveInfo,
 ) => TResult | Promise<TResult>;
 
 /** Mapping between all available schema types and the resolvers types */
@@ -123,6 +123,7 @@ export type ResolversTypes = ResolversObject<{
   Mutation: ResolverTypeWrapper<{}>;
   Query: ResolverTypeWrapper<{}>;
   School: ResolverTypeWrapper<types.School>;
+  Sex: types.Sex;
   String: ResolverTypeWrapper<types.Scalars['String']['output']>;
   Subscription: ResolverTypeWrapper<{}>;
 }>;
@@ -143,18 +144,25 @@ export type ResolversParentTypes = ResolversObject<{
 
 export type CandidateResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['Candidate'] = ResolversParentTypes['Candidate']
+  ParentType extends
+    ResolversParentTypes['Candidate'] = ResolversParentTypes['Candidate'],
 > = ResolversObject<{
-  education?: Resolver<ResolversTypes['Education'], ParentType, ContextType>;
+  education?: Resolver<
+    types.Maybe<ResolversTypes['Education']>,
+    ParentType,
+    ContextType
+  >;
   firstName?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   lastName?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  sex?: Resolver<ResolversTypes['Sex'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type EducationResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['Education'] = ResolversParentTypes['Education']
+  ParentType extends
+    ResolversParentTypes['Education'] = ResolversParentTypes['Education'],
 > = ResolversObject<{
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   major?: Resolver<ResolversTypes['Major'], ParentType, ContextType>;
@@ -164,7 +172,8 @@ export type EducationResolvers<
 
 export type MajorResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['Major'] = ResolversParentTypes['Major']
+  ParentType extends
+    ResolversParentTypes['Major'] = ResolversParentTypes['Major'],
 > = ResolversObject<{
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -173,7 +182,8 @@ export type MajorResolvers<
 
 export type MutationResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']
+  ParentType extends
+    ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation'],
 > = ResolversObject<{
   _empty?: Resolver<
     types.Maybe<ResolversTypes['String']>,
@@ -184,7 +194,8 @@ export type MutationResolvers<
 
 export type QueryResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']
+  ParentType extends
+    ResolversParentTypes['Query'] = ResolversParentTypes['Query'],
 > = ResolversObject<{
   candidate?: Resolver<
     types.Maybe<ResolversTypes['Candidate']>,
@@ -208,7 +219,8 @@ export type QueryResolvers<
 
 export type SchoolResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['School'] = ResolversParentTypes['School']
+  ParentType extends
+    ResolversParentTypes['School'] = ResolversParentTypes['School'],
 > = ResolversObject<{
   id?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -217,7 +229,8 @@ export type SchoolResolvers<
 
 export type SubscriptionResolvers<
   ContextType = any,
-  ParentType extends ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription']
+  ParentType extends
+    ResolversParentTypes['Subscription'] = ResolversParentTypes['Subscription'],
 > = ResolversObject<{
   _empty?: SubscriptionResolver<
     types.Maybe<ResolversTypes['String']>,

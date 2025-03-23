@@ -9,10 +9,11 @@ import {
   Query,
   School,
   Subscription,
+  Sex,
 } from '/Users/austinbiggs/Code/talent-pool/libs/gql/src/_generated/types';
 
 export const aCandidate = (
-  overrides?: Partial<Candidate>
+  overrides?: Partial<Candidate>,
 ): { __typename: 'Candidate' } & Candidate => {
   return {
     __typename: 'Candidate',
@@ -29,11 +30,15 @@ export const aCandidate = (
       overrides && overrides.hasOwnProperty('lastName')
         ? overrides.lastName!
         : 'vilicus',
+    sex:
+      overrides && overrides.hasOwnProperty('sex')
+        ? overrides.sex!
+        : Sex.Female,
   };
 };
 
 export const anEducation = (
-  overrides?: Partial<Education>
+  overrides?: Partial<Education>,
 ): { __typename: 'Education' } & Education => {
   return {
     __typename: 'Education',
@@ -50,7 +55,7 @@ export const anEducation = (
 };
 
 export const aMajor = (
-  overrides?: Partial<Major>
+  overrides?: Partial<Major>,
 ): { __typename: 'Major' } & Major => {
   return {
     __typename: 'Major',
@@ -61,7 +66,7 @@ export const aMajor = (
 };
 
 export const aMutation = (
-  overrides?: Partial<Mutation>
+  overrides?: Partial<Mutation>,
 ): { __typename: 'Mutation' } & Mutation => {
   return {
     __typename: 'Mutation',
@@ -73,7 +78,7 @@ export const aMutation = (
 };
 
 export const aQuery = (
-  overrides?: Partial<Query>
+  overrides?: Partial<Query>,
 ): { __typename: 'Query' } & Query => {
   return {
     __typename: 'Query',
@@ -93,7 +98,7 @@ export const aQuery = (
 };
 
 export const aSchool = (
-  overrides?: Partial<School>
+  overrides?: Partial<School>,
 ): { __typename: 'School' } & School => {
   return {
     __typename: 'School',
@@ -106,7 +111,7 @@ export const aSchool = (
 };
 
 export const aSubscription = (
-  overrides?: Partial<Subscription>
+  overrides?: Partial<Subscription>,
 ): { __typename: 'Subscription' } & Subscription => {
   return {
     __typename: 'Subscription',
