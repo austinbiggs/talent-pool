@@ -5,7 +5,17 @@ const typeDefs = gql`
     id: Int!
     firstName: String!
     lastName: String!
-    education: Education!
+
+    # Biological sex, gender, pronouns
+    sex: Sex!
+
+    # Education
+    education: Education
+  }
+
+  enum Sex {
+    FEMALE
+    MALE
   }
 `;
 

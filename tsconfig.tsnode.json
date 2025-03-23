@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "target": "esnext"
+    }
+  }
+}

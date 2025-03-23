@@ -14,7 +14,7 @@ export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & {
 };
 export type MakeEmpty<
   T extends { [key: string]: unknown },
-  K extends keyof T
+  K extends keyof T,
 > = { [_ in K]?: never };
 export type Incremental<T> =
   | T
@@ -32,10 +32,11 @@ export type Scalars = {
 
 export type Candidate = {
   __typename?: 'Candidate';
-  education: Education;
+  education?: Maybe<Education>;
   firstName: Scalars['String']['output'];
   id: Scalars['Int']['output'];
   lastName: Scalars['String']['output'];
+  sex: Sex;
 };
 
 export type Education = {
@@ -80,6 +81,11 @@ export type School = {
   id: Scalars['Int']['output'];
   name: Scalars['String']['output'];
 };
+
+export enum Sex {
+  Female = 'FEMALE',
+  Male = 'MALE',
+}
 
 export type Subscription = {
   __typename?: 'Subscription';
