@@ -6,6 +6,20 @@
   "tags": [],
   "// targets": "to see all targets run: nx show project db --web",
   "targets": {
+    "prisma": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "npx prisma",
+            "forwardAllArgs": true
+          }
+        ],
+        "color": true,
+        "cwd": "apps/talent-pool/db/src",
+        "parallel": false
+      }
+    },
     "supabase": {
       "executor": "nx:run-commands",
       "options": {

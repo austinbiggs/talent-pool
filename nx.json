@@ -37,7 +37,7 @@
         "libs/gql/models/*",
         "libs/gql/resolvers/*",
         "libs/gql/*",
-        "apps/talent-pool/db//*"
+        "apps/talent-pool/db/*"
       ]
     },
     {
@@ -70,7 +70,7 @@
         "libs/gql/models/*",
         "libs/gql/resolvers/*",
         "libs/gql/*",
-        "apps/talent-pool/db//*"
+        "apps/talent-pool/db/*"
       ],
       "options": {
         "typecheck": {
