@@ -16577,6 +16577,7 @@ __metadata:
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
     sass: "npm:1.86.0"
+    the-new-css-reset: "npm:1.11.3"
     ts-jest: "npm:29.2.6"
     ts-node: "npm:10.9.2"
     tslib: "npm:2.8.1"
@@ -16663,6 +16664,13 @@ __metadata:
     glob: "npm:^7.1.4"
     minimatch: "npm:^3.0.4"
   checksum: 10c0/019d33d81adff3f9f1bfcff18125fb2d3c65564f437d9be539270ee74b994986abb8260c7c2ce90e8f30162178b09dbbce33c6389273afac4f36069c48521f57
+  languageName: node
+  linkType: hard
+
+"the-new-css-reset@npm:1.11.3":
+  version: 1.11.3
+  resolution: "the-new-css-reset@npm:1.11.3"
+  checksum: 10c0/05eaeea6a9190fe2d5c7d584686bba4ff8532b72c8a51425118a6a64c78f863c3fca5b2ad79efda307ca42fdfee13368ba4ec178f4c42aaff3febc61ad330a43
   languageName: node
   linkType: hard
 

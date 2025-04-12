@@ -1,9 +1,3 @@
-import styles from './page.module.scss';
+import Candidates from "../views/candidates/page"
 
-export default function Index() {
-  return (
-    <div className={styles.page}>
-      Hello World
-    </div>
-  );
-}
+export default Candidates;
