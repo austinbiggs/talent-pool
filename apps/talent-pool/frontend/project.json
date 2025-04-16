@@ -1,25 +1,25 @@
 {
-  "name": "talent-pool",
+  "name": "frontend",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/talent-pool",
+  "sourceRoot": "apps/frontend",
   "projectType": "application",
   "tags": [],
-  "// targets": "to see all targets run: nx show project talent-pool --web",
+  "// targets": "to see all targets run: nx show project frontend --web",
   "targets": {
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "talent-pool:build",
+        "buildTarget": "frontend:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "talent-pool:build:development",
+          "buildTarget": "frontend:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "talent-pool:build:production",
+          "buildTarget": "frontend:build:production",
           "dev": false
         }
       }
