@@ -12527,12 +12527,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jsox@npm:^1.2.121":
-  version: 1.2.121
-  resolution: "jsox@npm:1.2.121"
+"jsox@npm:^1.2.123":
+  version: 1.2.123
+  resolution: "jsox@npm:1.2.123"
   bin:
     jsox: lib/cli.js
-  checksum: 10c0/880bbe067dc670e3ccd6282e91aa1f4076ce9fbdb44b61ebb4a330ea7ddf9f46bc92cc1696280cbcf050eeaf23c97637acf35258669c12b33acd8a4314d72c49
+  checksum: 10c0/7ed61da716d9f012c24b21cea50cd2d0fead794fd5ef0192556075b202d7689fb89503aa62232efdf13818b23779d9b99bf8414b32a10f9e441621ae8addd5cb
   languageName: node
   linkType: hard
 
@@ -14983,17 +14983,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-sql@npm:0.19.0":
-  version: 0.19.0
-  resolution: "prettier-plugin-sql@npm:0.19.0"
+"prettier-plugin-sql@npm:0.19.1":
+  version: 0.19.1
+  resolution: "prettier-plugin-sql@npm:0.19.1"
   dependencies:
-    jsox: "npm:^1.2.121"
+    jsox: "npm:^1.2.123"
     node-sql-parser: "npm:^5.3.8"
     sql-formatter: "npm:^15.5.2"
     tslib: "npm:^2.8.1"
   peerDependencies:
     prettier: ^3.0.3
-  checksum: 10c0/69f99287b196fbc385b4616eae5c0a2971a1e95387c0e3d7ae902a6b75ae293aefc29c228138448c9d3499c1307a32ca51b6fccf5a8186e2e1396b412da640c2
+  checksum: 10c0/f4ae36e19782ccfde5b3d9d0c7fb574df276c92ea944fb404dc779ac6801cb2ff31591a7e510a45886469c539fb9d2d67efdbdf54adb3d3362e2597a57a683cd
   languageName: node
   linkType: hard
 
@@ -17175,7 +17175,7 @@ __metadata:
     nx: "npm:20.8.0"
     postcss: "npm:8.5.3"
     prettier: "npm:3.5.3"
-    prettier-plugin-sql: "npm:0.19.0"
+    prettier-plugin-sql: "npm:0.19.1"
     react: "npm:19.1.0"
     react-dom: "npm:19.1.0"
     sass: "npm:1.87.0"
