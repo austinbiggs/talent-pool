@@ -111,9 +111,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/server@npm:4.12.0":
-  version: 4.12.0
-  resolution: "@apollo/server@npm:4.12.0"
+"@apollo/server@npm:4.12.2":
+  version: 4.12.2
+  resolution: "@apollo/server@npm:4.12.2"
   dependencies:
     "@apollo/cache-control-types": "npm:^1.0.3"
     "@apollo/server-gateway-interface": "npm:^1.1.1"
@@ -141,7 +141,7 @@ __metadata:
     whatwg-mimetype: "npm:^3.0.0"
   peerDependencies:
     graphql: ^16.6.0
-  checksum: 10c0/96d07e82ebabbd1634413499cfbbe84199840433e2197e383cb5a711791ac7d01d804d6516c22b19a949ab3660456061e421b44e4c63130ebfaa7bd32806dee3
+  checksum: 10c0/c5ac01490adcc1f36787f6be2e0c698a3d7ffe9846bd6f70c18d788c5c60b528fc0f2d037ed5ac4a2ddf4d24e72335371e3e1bfc16c094cbb3e034b883ebffd4
   languageName: node
   linkType: hard
 
@@ -17122,7 +17122,7 @@ __metadata:
   resolution: "talent-pool@workspace:."
   dependencies:
     "@apollo/client": "npm:3.13.8"
-    "@apollo/server": "npm:4.12.0"
+    "@apollo/server": "npm:4.12.2"
     "@as-integrations/next": "npm:3.2.0"
     "@eslint/compat": "npm:1.2.8"
     "@eslint/eslintrc": "npm:3.3.1"
