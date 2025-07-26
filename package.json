@@ -73,7 +73,7 @@
     "lodash": "4.17.21",
     "nx": "20.8.0",
     "prettier": "3.5.3",
-    "prettier-plugin-sql": "0.19.0",
+    "prettier-plugin-sql": "0.19.2",
     "sass": "1.86.3",
     "ts-jest": "29.3.2",
     "ts-node": "10.9.2",
