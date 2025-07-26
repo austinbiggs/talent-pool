@@ -25,13 +25,13 @@ jobs:
         uses: ./.github/actions/setup-project
 
       - name: 'Start the Supabase development server'
-        run: yarn nx run db:supabase start
+        run: pnpm nx run db:supabase start
 
       - name: 'Lint the database migrations'
-        run: yarn nx run db:supabase db lint --level error
+        run: pnpm nx run db:supabase db lint --level error
 
       - name: 'Link the remote database'
-        run: yarn nx run db:supabase link --project-ref ${SUPABASE_PROJECT_ID} --password ${SUPABASE_DB_PASSWORD}
+        run: pnpm nx run db:supabase link --project-ref ${SUPABASE_PROJECT_ID} --password ${SUPABASE_DB_PASSWORD}
 
       - name: 'Apply all pending migrations to the database'
-        run: yarn nx run db:supabase db push --linked --include-all --verbose
+        run: pnpm nx run db:supabase db push --linked --include-all --verbose
