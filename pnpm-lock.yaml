@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@as-integrations/next':
         specifier: 3.2.0
-        version: 3.2.0(@apollo/server@4.12.0(encoding@0.1.13)(graphql@16.10.0))(next@15.3.0(@babel/core@7.28.0)(babel-plugin-macros@3.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3))
+        version: 3.2.0(@apollo/server@4.12.2(encoding@0.1.13)(graphql@16.10.0))(next@15.3.0(@babel/core@7.28.0)(babel-plugin-macros@3.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3))
       '@supabase/ssr':
         specifier: 0.6.1
         version: 0.6.1(@supabase/supabase-js@2.49.4)
@@ -40,11 +40,11 @@ importers:
         version: 1.11.3
     devDependencies:
       '@apollo/client':
-        specifier: 3.13.7
-        version: 3.13.7(@types/react@19.1.1)(graphql-ws@6.0.6(graphql@16.10.0)(ws@8.18.0))(graphql@16.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+        specifier: 3.13.8
+        version: 3.13.8(@types/react@19.1.1)(graphql-ws@6.0.6(graphql@16.10.0)(ws@8.18.0))(graphql@16.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@apollo/server':
-        specifier: 4.12.0
-        version: 4.12.0(encoding@0.1.13)(graphql@16.10.0)
+        specifier: 4.12.2
+        version: 4.12.2(encoding@0.1.13)(graphql@16.10.0)
       '@eslint/compat':
         specifier: 1.2.8
         version: 1.2.8(eslint@9.24.0(jiti@2.5.1))
@@ -223,8 +223,8 @@ packages:
     peerDependencies:
       graphql: 14.x || 15.x || 16.x
 
-  '@apollo/client@3.13.7':
-    resolution: {integrity: sha512-jOp8EctxOirgg5BSV0hgpcUSprrW7b9pf4r8ybUcY6Z+0T+ja5W82kI/rJeLUHxhT3YOKBm+72hWUHfsNIa+Fg==}
+  '@apollo/client@3.13.8':
+    resolution: {integrity: sha512-YM9lQpm0VfVco4DSyKooHS/fDTiKQcCHfxr7i3iL6a0kP/jNO5+4NFK6vtRDxaYisd5BrwOZHLJpPBnvRVpKPg==}
     peerDependencies:
       graphql: ^15.0.0 || ^16.0.0
       graphql-ws: ^5.5.5 || ^6.0.3
@@ -251,8 +251,8 @@ packages:
     peerDependencies:
       graphql: 14.x || 15.x || 16.x
 
-  '@apollo/server@4.12.0':
-    resolution: {integrity: sha512-Z5RNTCnIia+dFsP5HW2ugQMrIOWgyNWyKP+jMVXthp/ECjYyyRYPC41ukCDwxHQY4vNZ3rgbgqroWVQUGFt2gA==}
+  '@apollo/server@4.12.2':
+    resolution: {integrity: sha512-jKRlf+sBMMdKYrjMoiWKne42Eb6paBfDOr08KJnUaeaiyWFj+/040FjVPQI7YGLfdwnYIsl1NUUqS2UdgezJDg==}
     engines: {node: '>=14.16.0'}
     deprecated: Apollo Server v4 is deprecated and will transition to end-of-life on January 26, 2026. As long as you are already using a non-EOL version of Node.js, upgrading to v5 should take only a few minutes. See https://www.apollographql.com/docs/apollo-server/previous-versions for details.
     peerDependencies:
@@ -8091,7 +8091,7 @@ snapshots:
     dependencies:
       graphql: 16.10.0
 
-  '@apollo/client@3.13.7(@types/react@19.1.1)(graphql-ws@6.0.6(graphql@16.10.0)(ws@8.18.0))(graphql@16.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
+  '@apollo/client@3.13.8(@types/react@19.1.1)(graphql-ws@6.0.6(graphql@16.10.0)(ws@8.18.0))(graphql@16.10.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@graphql-typed-document-node/core': 3.2.0(graphql@16.10.0)
       '@wry/caches': 1.0.1
@@ -8137,7 +8137,7 @@ snapshots:
       '@apollo/utils.logger': 2.0.1
       graphql: 16.10.0
 
-  '@apollo/server@4.12.0(encoding@0.1.13)(graphql@16.10.0)':
+  '@apollo/server@4.12.2(encoding@0.1.13)(graphql@16.10.0)':
     dependencies:
       '@apollo/cache-control-types': 1.0.3(graphql@16.10.0)
       '@apollo/server-gateway-interface': 1.1.1(graphql@16.10.0)
@@ -8261,9 +8261,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@as-integrations/next@3.2.0(@apollo/server@4.12.0(encoding@0.1.13)(graphql@16.10.0))(next@15.3.0(@babel/core@7.28.0)(babel-plugin-macros@3.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3))':
+  '@as-integrations/next@3.2.0(@apollo/server@4.12.2(encoding@0.1.13)(graphql@16.10.0))(next@15.3.0(@babel/core@7.28.0)(babel-plugin-macros@3.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3))':
     dependencies:
-      '@apollo/server': 4.12.0(encoding@0.1.13)(graphql@16.10.0)
+      '@apollo/server': 4.12.2(encoding@0.1.13)(graphql@16.10.0)
       next: 15.3.0(@babel/core@7.28.0)(babel-plugin-macros@3.1.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(sass@1.86.3)
 
   '@babel/code-frame@7.27.1':
