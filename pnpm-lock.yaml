@@ -163,8 +163,8 @@ importers:
         specifier: 16.10.0
         version: 16.10.0
       graphql-codegen-typescript-mock-data:
-        specifier: 4.4.0
-        version: 4.4.0(graphql@16.10.0)
+        specifier: 5.0.1
+        version: 5.0.1(graphql@16.10.0)(typescript@5.8.3)
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.14.1)(babel-plugin-macros@3.1.0)(ts-node@10.9.2(@swc/core@1.11.21(@swc/helpers@0.5.17))(@types/node@22.14.1)(typescript@5.8.3))
@@ -1243,10 +1243,6 @@ packages:
   '@eslint/plugin-kit@0.2.8':
     resolution: {integrity: sha512-ZAoA40rNMPwSm+AeHpCq8STiNAwzWLJuP8Xv4CHIc9wv/PSuExjMrmjfYNj682vW0OOiZ1HKxzvjQr9XZIisQA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@faker-js/faker@8.4.1':
-    resolution: {integrity: sha512-XQ3cU+Q8Uqmrbf2e0cIC/QN43sTBSC8KF12u29Mb47tWrt2hAgBXSgpZMj4Ao8Uk0iJcU99QsOCaIL8934obCg==}
-    engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0, npm: '>=6.14.13'}
 
   '@faker-js/faker@9.9.0':
     resolution: {integrity: sha512-OEl393iCOoo/z8bMezRlJu+GlRGlsKbUAN7jKB6LhnKoqKve5DXRpalbItIIcwnCjs1k/FOPjFzcA6Qn+H+YbA==}
@@ -4868,10 +4864,12 @@ packages:
   graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
 
-  graphql-codegen-typescript-mock-data@4.4.0:
-    resolution: {integrity: sha512-HXqSJRqpDKlK65jKZiWxkcWp/KCxpzpBNmGw7AWEN0Hzdk++UZZsveg0D8JaX9LVcVBBubamOInaYqjY8cm/Fw==}
+  graphql-codegen-typescript-mock-data@5.0.1:
+    resolution: {integrity: sha512-sRka9fFxLPAJiq/rPdi0z+SGTYOCVK0zzZmaWDQ3hD4uW3lH3KMlH6u0fGQCObKid6z3Ui120Y9w5dayNslM0Q==}
+    engines: {node: '>=18.0.0'}
     peerDependencies:
       graphql: ^14.6.0 || ^15.0.0 || ^16.0.0
+      typescript: '>=5.0.0'
 
   graphql-config@5.1.5:
     resolution: {integrity: sha512-mG2LL1HccpU8qg5ajLROgdsBzx/o2M6kgI3uAmoaXiSH9PCUbtIyLomLqUtCFaAeG2YCFsl0M5cfQ9rKmDoMVA==}
@@ -9297,8 +9295,6 @@ snapshots:
     dependencies:
       '@eslint/core': 0.13.0
       levn: 0.4.1
-
-  '@faker-js/faker@8.4.1': {}
 
   '@faker-js/faker@9.9.0': {}
 
@@ -14061,9 +14057,9 @@ snapshots:
 
   graphemer@1.4.0: {}
 
-  graphql-codegen-typescript-mock-data@4.4.0(graphql@16.10.0):
+  graphql-codegen-typescript-mock-data@5.0.1(graphql@16.10.0)(typescript@5.8.3):
     dependencies:
-      '@faker-js/faker': 8.4.1
+      '@faker-js/faker': 9.9.0
       '@graphql-codegen/plugin-helpers': 5.1.1(graphql@16.10.0)
       '@graphql-tools/utils': 10.9.1(graphql@16.10.0)
       casual: 1.6.2
@@ -14073,6 +14069,7 @@ snapshots:
       pascal-case: 3.1.2
       sentence-case: 3.0.4
       tslib: 2.8.1
+      typescript: 5.8.3
       upper-case: 2.0.2
 
   graphql-config@5.1.5(@types/node@22.14.1)(graphql@16.10.0)(typescript@5.8.3):
