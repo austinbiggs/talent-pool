@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@as-integrations/next": "4.0.0",
-    "@supabase/ssr": "0.6.1",
+    "@supabase/ssr": "0.7.0",
     "@supabase/supabase-js": "2.55.0",
     "@tailwindcss/postcss": "4.1.12",
     "next": "15.5.0",
