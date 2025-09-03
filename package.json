@@ -40,7 +40,7 @@
     "@graphql-codegen/typescript-apollo-client-helpers": "3.0.1",
     "@graphql-codegen/typescript-operations": "4.6.1",
     "@graphql-codegen/typescript-react-apollo": "4.3.3",
-    "@graphql-codegen/typescript-resolvers": "4.5.1",
+    "@graphql-codegen/typescript-resolvers": "4.5.2",
     "@nx/eslint": "21.4.1",
     "@nx/eslint-plugin": "21.4.1",
     "@nx/jest": "21.4.1",
