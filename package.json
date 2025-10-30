@@ -13,7 +13,7 @@
     "nx": "nx"
   },
   "dependencies": {
-    "@as-integrations/next": "4.0.0",
+    "@as-integrations/next": "4.1.0",
     "@supabase/ssr": "0.7.0",
     "@supabase/supabase-js": "2.76.1",
     "@tailwindcss/postcss": "4.1.16",
