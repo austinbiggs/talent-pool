@@ -4,7 +4,7 @@
   "name": "talent-pool",
   "version": "0.0.0",
   "license": "MIT",
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "engines": {
     "node": "^22.14.0"
   },
