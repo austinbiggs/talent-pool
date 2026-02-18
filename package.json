@@ -27,7 +27,7 @@
   "devDependencies": {
     "@apollo/client": "4.0.9",
     "@apollo/server": "5.1.0",
-    "@eslint/compat": "1.4.1",
+    "@eslint/compat": "2.0.2",
     "@eslint/eslintrc": "3.3.1",
     "@eslint/js": "9.39.1",
     "@faker-js/faker": "10.1.0",
